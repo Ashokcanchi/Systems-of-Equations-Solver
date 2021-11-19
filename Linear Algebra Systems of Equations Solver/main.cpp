@@ -38,10 +38,7 @@ void getequations(vector<Equation> &num)
         cin.ignore();
         temp.clear();
     }
-    
-    
 }
-
 
 void Interchange_Rows(vector<Equation>& matrix)
 {
