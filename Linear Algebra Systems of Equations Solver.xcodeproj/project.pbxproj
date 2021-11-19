@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57D5B82E2720E1D100D07730 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57D5B82D2720E1D100D07730 /* main.cpp */; };
+		576A363B273FBE1C00438369 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576A3639273FBE1C00438369 /* main.cpp */; };
+		576A363E273FBF9400438369 /* Column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 576A363C273FBF9400438369 /* Column.cpp */; };
+		57D5B83A2720E29800D07730 /* Equation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57D5B8382720E29800D07730 /* Equation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		576A3639273FBE1C00438369 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		576A363A273FBE1C00438369 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		576A363C273FBF9400438369 /* Column.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Column.cpp; sourceTree = "<group>"; };
+		576A363D273FBF9400438369 /* Column.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Column.hpp; sourceTree = "<group>"; };
 		57D5B82A2720E1D100D07730 /* Linear Algebra Systems of Equations Solver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Linear Algebra Systems of Equations Solver"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D5B82D2720E1D100D07730 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		57D5B8382720E29800D07730 /* Equation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Equation.cpp; sourceTree = "<group>"; };
+		57D5B8392720E29800D07730 /* Equation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Equation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,7 @@
 		57D5B8212720E1D100D07730 = {
 			isa = PBXGroup;
 			children = (
+				576A363A273FBE1C00438369 /* main.hpp */,
 				57D5B82C2720E1D100D07730 /* Linear Algebra Systems of Equations Solver */,
 				57D5B82B2720E1D100D07730 /* Products */,
 			);
@@ -57,7 +65,11 @@
 		57D5B82C2720E1D100D07730 /* Linear Algebra Systems of Equations Solver */ = {
 			isa = PBXGroup;
 			children = (
-				57D5B82D2720E1D100D07730 /* main.cpp */,
+				57D5B8382720E29800D07730 /* Equation.cpp */,
+				57D5B8392720E29800D07730 /* Equation.hpp */,
+				576A3639273FBE1C00438369 /* main.cpp */,
+				576A363C273FBF9400438369 /* Column.cpp */,
+				576A363D273FBF9400438369 /* Column.hpp */,
 			);
 			path = "Linear Algebra Systems of Equations Solver";
 			sourceTree = "<group>";
@@ -119,7 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D5B82E2720E1D100D07730 /* main.cpp in Sources */,
+				576A363E273FBF9400438369 /* Column.cpp in Sources */,
+				576A363B273FBE1C00438369 /* main.cpp in Sources */,
+				57D5B83A2720E29800D07730 /* Equation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
