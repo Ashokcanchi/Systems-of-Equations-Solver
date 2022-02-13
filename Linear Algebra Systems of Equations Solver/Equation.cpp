@@ -28,20 +28,6 @@ vector<int> Equation::operator+(Equation &rhs)
     }
     return sum;
 }
-
-vector<int> Equation::getCoefs()
-{
-    return coefs;
-}
-void Equation::printCoefs()
-{
-    unsigned int i;
-    for(i = 0; i < coefs.size(); i++)
-    {
-        cout << coefs.at(i) << " ";
-    }
-    cout << endl;
-}
 void Equation::setCoefs()
 {
     int coef;
@@ -55,6 +41,19 @@ void Equation::setCoefs()
         size++;
     }
     
+}
+vector<int> Equation::getCoefs()
+{
+    return coefs;
+}
+void Equation::printCoefs()
+{
+    unsigned int i;
+    for(i = 0; i < coefs.size(); i++)
+    {
+        cout << coefs.at(i) << " ";
+    }
+    cout << endl;
 }
 void Equation::printRow()
 {
