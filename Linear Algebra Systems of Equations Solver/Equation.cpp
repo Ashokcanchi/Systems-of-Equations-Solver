@@ -7,7 +7,7 @@
 
 #include "Equation.hpp"
 #include <sstream>
-vector<int> Equation::operator*(int &num)
+vector<int> Equation::operator*(int &num)//letting an equation be multiplied by a number
 {
     vector<int> product;
     unsigned int i;
@@ -18,7 +18,7 @@ vector<int> Equation::operator*(int &num)
     return product;
     
 }
-vector<int> Equation::operator+(Equation &rhs)
+vector<int> Equation::operator+(Equation &rhs)//Adding two equations(two rows of equations) together
 {
     unsigned int i;
     vector<int> sum;
@@ -28,7 +28,7 @@ vector<int> Equation::operator+(Equation &rhs)
     }
     return sum;
 }
-void Equation::setCoefs()
+void Equation::setCoefs() //storing the coefficients from the user-inputted equation
 {
     int coef;
     char sign, sign2;
@@ -36,7 +36,7 @@ void Equation::setCoefs()
     ins.str(user);
     while(ins >> coef)
     {
-        ins >> sign >> sign2;//tries to read from file that has no more data to read from, is this ok?
+        ins >> sign >> sign2;
         coefs.push_back(coef);
         size++;
     }
