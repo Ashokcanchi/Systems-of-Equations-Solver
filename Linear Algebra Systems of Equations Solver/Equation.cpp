@@ -39,8 +39,7 @@ void Equation::setCoefs() //storing the coefficients from the user-inputted equa
         ins >> sign >> sign2;
         coefs.push_back(coef);
         size++;
-    }
-    
+    }   
 }
 vector<int> Equation::getCoefs()
 {
