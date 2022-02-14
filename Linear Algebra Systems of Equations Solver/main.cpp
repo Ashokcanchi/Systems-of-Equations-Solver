@@ -45,7 +45,6 @@ void Interchange_Rows(vector<Equation>& matrix)//turning matrix into echelon for
     int i = 0;
     int entry;
     Equation temp;
-    bool is_enough_entries = true;
     while(i < matrix.size() && i < matrix.at(0).getSize() - 1)
     {
         entry = i + 1;
