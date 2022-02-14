@@ -40,7 +40,7 @@ void getequations(vector<Equation> &num)
     }
 }
 
-void Interchange_Rows(vector<Equation>& matrix)
+void Interchange_Rows(vector<Equation>& matrix)//turning matrix into echelon form
 {
     int i = 0;
     int entry;
