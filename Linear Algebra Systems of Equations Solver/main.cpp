@@ -8,6 +8,7 @@ using namespace std;
 
 void getequations(vector<Equation> &);
 void Interchange_Rows(vector<Equation>&);
+void ReducedEchelon(vector<Equation>&);
 
 int main() {
     unsigned int i;
@@ -15,6 +16,11 @@ int main() {
     string equation;
     getequations(num);
     Interchange_Rows(num);
+     for (i = 0; i < num.size(); i++)
+    {
+        num.at(i).printCoefs();
+    }
+    ReducedEchelon(num);
     for (i = 0; i < num.size(); i++)
     {
         num.at(i).printCoefs();
@@ -59,5 +65,24 @@ void Interchange_Rows(vector<Equation>& matrix)//turning matrix into echelon for
                }
         }
         i++; //output step
+    }
+}
+void ReducedEchelon(vector<Equation>& matrix) 
+{ 
+    int i = 0; 
+    int row_iterator = 0;
+    Equation temp;
+    while(i < matrix.size() && i < matrix.at(0).getSize() - 1) 
+    {
+        if(matrix.at(i).getCoef(i) != 0)
+            matrix.at(i) = matrix.at(i) * (1/matrix.at(i).getCoef(i));
+        row_iterator = i + 1;
+        while(row_iterator < matrix.size()) 
+        {
+            temp = matrix.at(i) * (matrix.at(row_iterator).getCoef(i) * -1);
+            matrix.at(row_iterator) = temp + matrix.at(row_iterator);
+            row_iterator++;
+        }
+        i++;
     }
 }
