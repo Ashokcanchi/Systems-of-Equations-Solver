@@ -18,12 +18,12 @@ public:
     void printRow();
     void printCoefs();
     void setRow_num(int);
-    vector<int> getCoefs();
-    vector<int> operator+(Equation &);
-    vector<int> operator*(int &);
+    double getCoef(int);
+    Equation operator+(Equation &);
+    Equation operator*(double);
     void setCoefs();
-    void settingCoefs(vector<int> &user) {coefs = user;}
-    Equation(vector<int>&);
+    void settingCoefs(vector<double> &user) {coefs = user;}
+    Equation(vector<double>&);
     //void setRow(vector<int>&);
     int getSize() const;
     void resize(int);
@@ -34,7 +34,7 @@ private:
     int size = 0;
     unsigned int _column;
     string user;
-    vector<int> coefs;
+    vector<double> coefs;
     
 };
 #endif /* Equation_hpp */
