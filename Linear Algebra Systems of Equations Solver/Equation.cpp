@@ -7,30 +7,30 @@
 
 #include "Equation.hpp"
 #include <sstream>
-vector<int> Equation::operator*(int &num)//letting an equation be multiplied by a number
+Equation Equation::operator*(double num)//letting an equation be multiplied by a number
 {
-    vector<int> product;
+    Equation product;
     unsigned int i;
     for(i = 0; i < coefs.size(); i++)
     {
-        product.at(i) = coefs.at(i) * num;
+        product.coefs.push_back(coefs.at(i) * num);
     }
     return product;
     
 }
-vector<int> Equation::operator+(Equation &rhs)//Adding two equations(two rows of equations) together
+Equation Equation::operator+(Equation &rhs)//Adding two equations(two rows of equations) together
 {
     unsigned int i;
-    vector<int> sum;
+    Equation sum;
     for(i = 0; i < coefs.size(); i++)
     {
-        sum.push_back(coefs.at(i) + rhs.coefs.at(i));
+        sum.coefs.push_back(coefs.at(i) + rhs.coefs.at(i));
     }
-    return sum;
+    return sum; 
 }
 void Equation::setCoefs() //storing the coefficients from the user-inputted equation
 {
-    int coef;
+    double coef;
     char sign, sign2;
     istringstream ins;
     ins.str(user);
@@ -41,9 +41,9 @@ void Equation::setCoefs() //storing the coefficients from the user-inputted equa
         size++;
     }   
 }
-vector<int> Equation::getCoefs()
+double Equation::getCoef(int index)
 {
-    return coefs;
+    return coefs.at(index);
 }
 void Equation::printCoefs()
 {
@@ -68,7 +68,7 @@ void Equation::setRow_num(int user)
     _row = user;
 }
 
-Equation::Equation(vector<int>& user_r)
+Equation::Equation(vector<double>& user_r)
 {
     coefs = user_r;
 }
