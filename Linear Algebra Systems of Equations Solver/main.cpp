@@ -64,7 +64,7 @@ void Interchange_Rows(vector<Equation>& matrix)//turning matrix into echelon for
                     entry++;
                }
         }
-        i++; //output step
+        i++;
     }
 }
 void ReducedEchelon(vector<Equation>& matrix) 
